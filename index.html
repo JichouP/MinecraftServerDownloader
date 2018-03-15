@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Minecraft Server Downloader</title>
+</head>
+<body>
+  <div>
+    <h1>Minecraft Server Downloader</h1>
+    <h2>Please input minecraft version</h2>
+    <script>function getVersion() {version = document.getElementById('version').value;}</script>
+    <div><input type="text" name="version" id="version"><button id="Download" onclick="getVersion(); window.open('https://s3.amazonaws.com/Minecraft.Download/versions/' + version + '/minecraft_server.' + version + '.jar')">Download</button></div>
+  </div>
+</body>
+</html>
