@@ -4,14 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style type="text/css">
+    div.outer {
+      margin: 50px -30% 0px 30%;
+    }
+  </style>
+  <script type="text/javascript">
+    function getMajorVersion() {majorVersion = document.getElementById('majorVersion').value;}
+    function getAllVersion() {allVersion = document.getElementById('allVersion').value;}
+    function getInputVersion() {inputVersion = document.getElementById('inputVersion').value;}
+  </script>
   <title>Minecraft Server Downloader</title>
 </head>
 <body>
-  <div>
-    <h1>Minecraft Server Downloader</h1>
-    <h2>Please input minecraft version</h2>
-    <script>function getVersion() {version = document.getElementById('version').value;}</script>
-    <div><input type="text" name="version" id="version"><button id="Download" onclick="getVersion(); window.open('https://s3.amazonaws.com/Minecraft.Download/versions/' + version + '/minecraft_server.' + version + '.jar')">Download</button></div>
-  </div>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Minecraft Server Downloader</h1>
+    </div>
+ </div>
+  <div class="outer">
+    <div class="row">
+    <h2>Major Versions</h2>
+      <div class="col-xs-1">
+        <select class="form-control" name="majoeVersion" id="majorVersion">
+          <option value="1.12.2">1.12.2</option>
+          <option value="1.11.2">1.11.2</option>
+          <option value="1.10.2">1.10.2</option>
+          <option value="1.9.4">1.9.4</option>
+          <option value="1.8.9">1.8.9</option>
+          <option value="1.7.10">1.7.10</option>
+          <option value="1.6.4">1.6.4</option>
+          <option value="1.6.2">1.6.2</option>
+          <option value="1.5.2">1.5.2</option>
+          <option value="1.4.7">1.4.7</option>
+          <option value="1.3.2">1.3.2</option>
+          <option value="1.2.5">1.2.5</option>
+        </select>
+        <button class="btn btn-primary" onclick="getMajorVersion(); window.open('https://s3.amazonaws.com/Minecraft.Download/versions/' + majorVersion + '/minecraft_server.' + majorVersion + '.jar')">Download</button>
+      </div>
+    </div>
+    <div class="row">
+    <h2>All Versions</h2>
+      <div class="col-xs-1">
+        <select class="form-control" name="allVersion" id="allVersion">
+          <option value="1.12.2">1.12.2</option>
+          <option value="1.12.1">1.12.1</option>
+          <option value="1.12">1.12</option>
+          <option value="1.11.2">1.11.2</option>
+          <option value="1.11.1">1.11.1</option>
+          <option value="1.11">1.11</option>
+          <option value="1.10.2">1.10.2</option>
+          <option value="1.10.1">1.10.1</option>
+          <option value="1.10">1.10</option>
+          <option value="1.9.4">1.9.4</option>
+          <option value="1.9.3">1.9.3</option>
+          <option value="1.9.2">1.9.2</option>
+          <option value="1.9.1">1.9.1</option>
+          <option value="1.9">1.9</option>
+          <option value="1.8.9">1.8.9</option>
+          <option value="1.8.8">1.8.8</option>
+          <option value="1.8.7">1.8.7</option>
+          <option value="1.8.6">1.8.6</option>
+          <option value="1.8.5">1.8.5</option>
+          <option value="1.8.4">1.8.4</option>
+          <option value="1.8.3">1.8.3</option>
+          <option value="1.8.2">1.8.2</option>
+          <option value="1.8.2">1.8.1</option>
+          <option value="1.8">1.8</option>
+          <option value="1.7.10">1.7.10</option>
+          <option value="1.7.9">1.7.9</option>
+          <option value="1.7.8">1.7.8</option>
+          <option value="1.7.7">1.7.7</option>
+          <option value="1.7.6">1.7.6</option>
+          <option value="1.7.5">1.7.5</option>
+          <option value="1.7.4">1.7.4</option>
+          <option value="1.7.3">1.7.3</option>
+          <option value="1.7.2">1.7.2</option>
+          <option value="1.6.4">1.6.4</option>
+          <option value="1.6.2">1.6.2</option>
+          <option value="1.6.1">1.6.1</option>
+          <option value="1.5.2">1.5.2</option>
+          <option value="1.5.1">1.5.1</option>
+          <option value="1.4.7">1.4.7</option>
+          <option value="1.4.6">1.4.6</option>
+          <option value="1.4.5">1.4.5</option>
+          <option value="1.4.4">1.4.4</option>
+          <option value="1.4.3">1.4.3</option>
+          <option value="1.4.2">1.4.2</option>
+          <option value="1.4.1">1.4.1</option>
+          <option value="1.3.2">1.3.2</option>
+          <option value="1.3.1">1.3.1</option>
+          <option value="1.2.5">1.2.5</option>
+        </select>
+        <button class="btn btn-primary" onclick="getAllVersion(); window.open('https://s3.amazonaws.com/Minecraft.Download/versions/' + allVersion + '/minecraft_server.' + allVersion + '.jar')">Download</button>
+      </div>
+    </div>
+    <div class="row">
+    <h2>Input Version</h2>
+      <div class="col-xs-1">
+        <div class="input-group form">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+          <input class="form-control" type="text" name="inputVersion" id="inputVersion">
+        </div>
+        <button class="btn btn-primary" onclick="getInputVersion(); window.open('https://s3.amazonaws.com/Minecraft.Download/versions/' + inputVersion + '/minecraft_server.' + inputVersion + '.jar')">Download</button>
+      </div>
+    </div>
 </body>
 </html>
